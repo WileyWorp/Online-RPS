@@ -1,0 +1,154 @@
+:root {
+    --text: #0b0b0f;
+    --background: #babaff;
+    --primary: #6060a5;
+    --secondary: #a9a9d3;
+    --accent: #8383c6;
+}
+
+
+html, body {
+    margin: 0;
+    width: 100%;
+    background-color: var(--background);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Header */
+
+header {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+    width: 30px;
+    display: block;
+    margin: 1em 0 0 1em;
+}
+
+.nav div {
+    height: 5px;
+    background-color: #fff;
+    margin: 5px 0;
+    border-radius: 25px;
+}
+
+header h1 {
+    font-size: 1em;
+    color: var(--text);
+    margin: 0;
+    text-align: center;
+}
+
+header h1 div {
+    color: gold;
+    font-size: 3em;
+}
+
+.account {
+    width: 2em;
+    height: 2em;
+    background-image: url('img/account.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    margin-right: 1em;
+}
+
+/* Main Content */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    margin-top: 5em;
+    z-index: 0;
+}
+
+.play {
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px 0;
+    background-color: var(--secondary);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.play button {
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.play button:hover {
+    transition-duration: 0.25s;
+    background-color: var(--accent);
+}
+
+.play .seasonButton {
+    background-color: gold;
+    color: #000;
+}
+
+.play .seasonButton:hover {
+    transition-duration: 0.25s;
+    background-color: rgb(239, 220, 113);
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
+footer p {
+    color: var(--text);
+    margin: 0;
+    text-align: center;
+}
+
+/* Media queries */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .play {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .play button {
+        padding: 0.5em 1em;
+    }
+}
