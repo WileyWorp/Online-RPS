@@ -1,19 +1,10 @@
 // Create the ad warning container
 const adWarningContainer = document.createElement('div');
-
-adWarningContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-adWarningContainer.style.height = '100%';
-adWarningContainer.style.width = '100%';
-adWarningContainer.style.position = 'fixed';
-adWarningContainer.style.top = '0';
-adWarningContainer.style.left = '0';
-adWarningContainer.style.display = 'flex';
-adWarningContainer.style.justifyContent = 'center';
-adWarningContainer.style.alignItems = 'center';
-adWarningContainer.style.zIndex = '10';
+adWarningContainer.className = 'adWarningContainer';
 
 // Create the ad warning
 const adWarning = document.createElement('div');
+adWarning.className = 'adWarning';
 
 adWarning.style.display = 'flex';
 adWarning.style.flexDirection = 'column';
@@ -24,37 +15,21 @@ adWarning.style.borderRadius = '5px';
 
 // create the ad warning heading
 const adWarningHeading = document.createElement('h1');
+adWarningHeading.className = 'adWarningHeading';
 adWarningHeading.textContent = 'WARNING!'
-adWarningHeading.style.backgroundColor = '#8383c6';
-adWarningHeading.style.padding = '5% 0';
-adWarningHeading.style.margin = '0';
-adWarningHeading.style.textAlign = 'center';
-adWarningHeading.style.color = '#fff';
-adWarningHeading.style.fontSize = '3.5em';
-adWarningHeading.style.borderRadius = '5px 5px 0 0';
 
 // create the ad warning paragraph
 const adWarningParagraph = document.createElement('p');
-adWarningParagraph.innerHTML = 'I understand that ads can be annoying. But hosting a website is expensive and requires ads to be funded. If you would like to continue using an ad blocker, I request that you donate at least one dollar. Thank you. <br> - Wiley Scheideman, creator of RPSRanked'
-adWarningParagraph.style.backgroundColor = '#8383c6';
-adWarningParagraph.style.padding = '10% 20%';
-adWarningParagraph.style.borderRadius = '25px';
-adWarningParagraph.style.margin = '5%';
+adWarningParagraph.className = 'adWarningParagraph';
+adWarningParagraph.innerHTML = 'I understand that ads can be annoying. But hosting a website is expensive and requires ads to be funded. If you would like to continue using an ad blocker, I request that you donate at least one dollar. Thank you. <br> - Wiley Scheideman, creator of RPSRanked';
 
 // create the "i understand" button
 
 const adWarningButton = document.createElement('button');
+adWarningButton.className = 'adWarningButton';
 adWarningButton.textContent = 'I understand';
-adWarningButton.style.backgroundColor = '#8383c6';
-adWarningButton.style.color = '#fff';
-adWarningButton.style.border = 'none';
-adWarningButton.style.margin = '5%';
-adWarningButton.style.padding = '10px 20px';
-adWarningButton.style.borderRadius = '5px';
-adWarningButton.style.alignSelf = 'flex-end';
-adWarningButton.style.cursor = 'pointer';
 
-adWarningButton.addEventListener('click', function() {
+adWarningButton.addEventListener('click', function () {
     adWarningContainer.style.display = 'none';
 })
 

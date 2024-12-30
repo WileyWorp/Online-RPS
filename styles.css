@@ -7,11 +7,12 @@
 }
 
 
-html, body {
+html,
+body {
     margin: 0;
     width: 100%;
     background-color: var(--background);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Header */
@@ -142,6 +143,57 @@ footer p {
     color: var(--text);
     margin: 0;
     text-align: center;
+}
+
+/* Ad block warning */
+
+.adWarningContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.adWarningContainer div {
+    display: flex;
+    flex-direction: column;
+    background-color: #6060a5;
+    height: 50%;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.adWarningContainer div h1 {
+    background-color: #8383c6;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    color: #ff4747;
+    font-size: 3.5em;
+    border-radius: 5px 5px 0 0;
+}
+
+.adWarningContainer div p {
+    background-color: #8383c6;
+    padding: 10% 20%;
+    border-radius: 25px;
+    margin: 5%;
+}
+
+.adWarningContainer div button {
+    background-color: #8383c6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    align-self: flex-end;
+    cursor: pointer;
 }
 
 /* Media queries */
