@@ -50,8 +50,6 @@ function checkAdsBlocked(callback) {
 
 // display ad warning
 checkAdsBlocked(function (adsBlocked) {
-    console.log('ads blocked = ' + adsBlocked)
-
     if (adsBlocked === true) {
         // Add the ad warning to the document
         adWarningContainer.appendChild(adWarning);
@@ -60,4 +58,20 @@ checkAdsBlocked(function (adsBlocked) {
         adWarning.appendChild(adWarningButton);
         document.body.appendChild(adWarningContainer);
     }
+});
+
+
+// nav drop down toggle
+
+document.querySelector('.navMenuContainer').addEventListener('click', function (e) {
+    if (!e.target.matches('.navigation')) {
+        var menuContainer = document.querySelector('.navMenuContainer');
+        if (menuContainer.classList.contains('show')) {
+            menuContainer.classList.remove('show');
+        }
+    }
+});
+
+document.querySelector('.nav').addEventListener('click', function () {
+    document.querySelector('.navMenuContainer').classList.add('show');
 });
